@@ -15,17 +15,74 @@ footer-left: Do Hoang
 \tableofcontents
 \newpage{}
 
+
+
+
 ## I. Introduction
 
-## II. Project Plan
+### 1.1 Context and Motivation	
 
-* 17 - 21/06: Learn Basic and testing with Unreal Engine.
-* 22/06: Take pictures from all the floor, lecturer rooms, lab rooms in USTH building.
-* 23 - 15/07: Create all the basic object and material in USTH Building.
-* 15/07 - ? : Starting to develop the first floor in USTH.
+### 1.2  Motivation
 
-## Documentation
-* https://docs.unrealengine.com/en-US/GettingStarted/index.html?fbclid=IwAR3EfsTL4cphDulQsby80o93qsbYAjKTJqceGP05gyx4W6Us6kYyWCig2Jo
-* **Video:**https://www.youtube.com/user/UnrealDevelopmentKit/playlists?sort=dd&shelf_id=17&view=50&fbclid=IwAR1oh9H6QnPfcCeyRkN90_yZLLXhwrvHFu6GDccV6CtUSDXsuuCzGIi3KKE
+### 1.3 Objectives 
+
+### 1.4 Thesis structures
 
 
+## II. Exhaustive - System Analysis 
+
+### 2.1 Problem Statement 
+
+### 2.2 System Analysis 
+
+#### 2.2.1 System Requirement - Supplementary specification
+
+##### a. Objectives 
+
+##### b. Scope
+
+##### c. Reliability
+
+##### d. Performance 
+
+##### e. Supportability
+
+##### f. Design constrains
+
+
+### 2.3 Use-case model 
+
+#### 2.3.1 Use-case model
+
+
+#### 2.3.2 Use-case model description
+
+##### a. Actor -> User group
+
+##### b. User-group 
+
+### 2.4 Software Architecture 
+
+#### 2.4.1 System Architecture 
+
+#### 2.4.2 System Architecture description
+
+
+## III. Material - Program - Methodology 
+
+### 3.1 External Program 
+
+#### 3.1.1 3Ds Max
+
+#### 3.1.2 Sketchup
+
+#### 3.1.3 Unreal Engine 
+
+### 3.2 Material
+
+#### 3.2.1 Direct X
+
+#### 3.2.2 A dedicated graphic card  
+
+
+### 3.3 Methodology
