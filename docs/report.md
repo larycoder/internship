@@ -18,71 +18,52 @@ footer-left: Do Hoang
 
 
 
-## I. Introduction
+# I. Introduction
 
-### 1.1 Context and Motivation	
+## 1.1 Context and Motivation	
 
-### 1.2  Motivation
+A virtual world or a digital world is a computer-based online community environment that is designed and shared by individuals, or may be populated by many users who can create a personal avatar so that they can interact in a custom-built, simulated world. These avatars are graphically rendered using computer graphics imaging (CGI) or any other rendering technology which can make people feel like they are in the real world. Individuals control their avatars using input devices like the keyboard, mouse and other specially designed command and simulation gadgets. 
 
-### 1.3 Objectives 
+Today's virtual worlds are purpose-built for entertainment, social, educational, training and various other purposes. It is being more better than the real world. So the virtual reality has take over everything. For instance the illustrations showed in a game are more better than the reality we live in. It provides the gamer a whole new experience by taking over his imaginations it’s as if we are playing the real game with all those real gaming characters in the real life. Virtual world is bringing out all our imaginations so that we can experience it in reality. Similarly for the automobile industry we can take a virtual ride of the desired vehicle we want to buy which provides a whole new dimension to the world of buying things. 
 
-### 1.4 Thesis structures
-
-
-## II. Exhaustive - System Analysis 
-
-### 2.1 Problem Statement 
-
-### 2.2 System Analysis 
-
-#### 2.2.1 System Requirement - Supplementary specification
-
-##### a. Objectives 
-
-##### b. Scope
-
-##### c. Reliability
-
-##### d. Performance 
-
-##### e. Supportability
-
-##### f. Design constrains
+Moreovers, virtual world has been adopted in education for teaching and learning situations. Students are able to interact with each other and within a three dimensional environment. Students can also be taken on virtual field trips, for example, to museums, taking tours of the solar system and going back in time to different eras.
 
 
-### 2.3 Use-case model 
 
-#### 2.3.1 Use-case model
+## 1.2 Objectives 
 
+Develop an interactive 3D virtual world of USTH building from easily captured 2D images. Specific goals include 
+- Collect a dataset of 2D images from cameras for different views of USTH 
+- Conduct fully 3D models from collected 2D images which will be a 3D model foundations for other reaseacher or developer to create others world of USTH
+- Build a realtime and interactive 3D virtual world of USTH from constructed 3D models.  
 
-#### 2.3.2 Use-case model description
-
-##### a. Actor -> User group
-
-##### b. User-group 
-
-### 2.4 Software Architecture 
-
-#### 2.4.1 System Architecture 
-
-#### 2.4.2 System Architecture description
+## 1.3 Thesis structures
 
 
-## III. Material - Program - Methodology 
+# II. State of the art 
 
-### 3.1 External Program 
+# III. Programs, Materials, Methodologies 
 
-#### 3.1.1 3Ds Max
+## 3.1 Programs 
 
-#### 3.1.2 Sketchup
+### 3.1.1 Sketchup
 
-#### 3.1.3 Unreal Engine 
+SketchUp is a 3D modeling computer program for a wide range of drawing applications such as architectural, interior design, landscape architecture, civil and mechanical engineering, film and video game design. This program was used in this project in order to create and conduct a fully 3D models from scratch. Therefore, they also provide an open library called 3D Warehouse which SketchUp users may upload and download 3D models to share. The models can be downloaded right into the program without anything having to be saved onto your computer's storage and it is free so anyone can download files for use in SketchUp or even other software such as AutoCAD, Revit and ArchiCAD.
 
-### 3.2 Material
+### 3.1.2 3DS Max
 
-#### 3.2.1 Direct X
+Autodesk 3ds Max is a professional 3D computer graphics program for making 3D animations, models, games and images. With this feature, the software will help me to correct the position of the texture and also to edit UV mapping of some models.
 
-#### 3.2.2 A dedicated graphic card  
+### 3.1.3 Substance Painter
 
+Substance Painter gives me all the tools I need to texture my 3D assets and also this software can help me to bake a normal map and metalic map.
 
-### 3.3 Methodology
+### 3.1.3 Unreal Engine
+
+## 3.2 Materials
+
+## 3.3 Methods 
+
+# IV Result and Discussion
+
+# V. Conclusion and Future work 
