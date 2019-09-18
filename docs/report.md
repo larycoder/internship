@@ -16,8 +16,6 @@ footer-left: Do Hoang
 \newpage{}
 
 
-
-
 # I. Introduction
 
 ## 1.1 Context and Motivation	
@@ -28,8 +26,6 @@ Today's virtual worlds are purpose-built for entertainment, social, educational,
 
 Moreovers, virtual world has been adopted in education for teaching and learning situations. Students are able to interact with each other and within a three dimensional environment. Students can also be taken on virtual field trips, for example, to museums, taking tours of the solar system and going back in time to different eras.
 
-
-
 ## 1.2 Objectives 
 
 Develop an interactive 3D virtual world of USTH building from easily captured 2D images. Specific goals include 
@@ -38,7 +34,6 @@ Develop an interactive 3D virtual world of USTH building from easily captured 2D
 - Build a realtime and interactive 3D virtual world of USTH from constructed 3D models.  
 
 ## 1.3 Thesis structures
-
 
 # II. State of the art 
 
@@ -61,6 +56,29 @@ Substance Painter gives me all the tools I need to texture my 3D assets and also
 ### 3.1.3 Unreal Engine
 
 ## 3.2 Materials
+
+
+## 3.3 Work Breakdown 
+
+### 3.3.1 Work Breakdown Diagram
+
+\begin{figure}
+\centering
+{\includegraphics[width=4in]{work-breakdown.png}}
+\caption{Work Breakdown Diagram}
+\end{figure}
+
+### 3.3.2 Work Breakdown Description
+#### a. Pre-project
+
+* Conduct a meeting with the participant of the Planning Phase, which involves setting expectations, articulating likely risk, etc.
+* Develop Work Breakdown Structure: break the project into smaller, measurable of work packages with a work breakdown structure.
+- **Collect a dataset** of *2D images* USTH: We will use a simple camera from a smartphones to perform this task. After taking picstures with different view of USTH, these photos will be classified to specific folder ( e.g: Room 5/Lab ICT). This approach has two drawbacks howerver, it is time-consuming and easy to make mistakes.
+
+#### b. Main phase
+
+- Conduct fully 3D models from collected 2D images which will be a 3D model foundations for other reaseacher or developer to create others world of USTH.
+First of all we need to create a Floor Plans from a 2D legacy images using Sketchup. 
 
 ## 3.3 Methods 
 
