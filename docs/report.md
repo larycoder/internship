@@ -1,5 +1,5 @@
 ---
-title: "3D Modelling with Unreal Engine "
+title: "Development of USTH interactive virtual world using Unreal Engine"
 author: \textbf{DO Duy Huy Hoang} \newline
         \newline
         \textit{University of Science and Technology Hanoi} \newline 
@@ -12,12 +12,43 @@ header-includes: |
     \usepackage{multicol}
     \usepackage{graphicx}
 footer-left: Do Hoang
+# lot: true
+# lof: true
 ...
 
 \newpage{}
+
+\begin{otherlanguage*}{american}
+{\Large\noindent%
+Declaration \newline}
+
+\noindent%
+I declare that the thesis is entirely my own under the guidance of Dr. Tran Giang Son.
+I certify that the work and result are totally honest and unprecedented previously published in the same or any similar form.
+In addition, all assessments, comments and statistics from other authors and organizations are indicated  and have been cited accordingly.
+If any fraud is found, I will take full responsibility for the content of my thesis. \newline
+\end{otherlanguage*}
+
+\vspace{3cm}
+
+\begin{otherlanguage*}{american}
+{\Large\noindent%
+Acknowledgement \newline}
+
+\noindent%
+Firstly, I would like to express my thanks to my research supervisor Dr. Tran Giang Son for giving me the opportunity to do research and providing invaluable guidance during this internship. Secondly, my sincere thanks also goes to Dr. Nghiem Thi Phuong for her encouragement, insightful comments and hard questions during the research. Thirdly, I thank my fellow labmates, friends in ICTLab: Kieu Tran, Linh Loc, An Luu, Duc Pham, Trung Bui for the stimulating discussions and for all the fun we have had in the last three years. I also very appreciate to have been a student at USTH where all professors and staffs are always willing to support their students. Besides, I would like to thank the Unreal Engine and Sketchup community for answering and providing many valuable knowledge I asked during the research. Last but not least, I express my deep and sincere gratitude to my parents who raise me up throughout my life by their patient and their love.
+\noindent%
+ \newline
+\end{otherlanguage*}
+
+\vspace{3cm}
+
+\newpage{}
+\listoftables
+\listoffigures
+\newpage{}
 \tableofcontents
 \newpage{}
-
 
 # I. Introduction
 
@@ -101,7 +132,7 @@ First of all we need to create a Floor Plans. We use a 2D legacy floor plans ima
 \end{figure}
 
 \newpage{}
-After created a floor plans  with sketchup layout, we start to structure and interior walls and Finally in order to make the 3D model complete, we import sketchup textures, create custom materials and also add furniture objects.
+After created a floor plans  with sketchup layout, we start to structure and interior walls and Finally in order to make the 3D model complete, we import sketchup textures, create custom materials and also add furniture objects. These furnitures can be found in the 3D warehouse store which comes with SketchUp when installed. Sometime I also need to create some special models in USTH thus it cannot be found in the store. 
 
 \begin{figure}
 \begin{multicols}{2}
@@ -123,7 +154,7 @@ To finish the 3D models and prepare models for Unreal Engine, the final step is 
 \caption{Normal map example}
 \end{figure}
 
-* **Preprocess data**: Before we can get started working with  SketchUp content in the Unreal Engine, we need to install the Unreal Datasmith Exporter plugin for SketchUp and able to export a scence from SketchUp as a *.udatasmith* file, thus the previous application creates models in a .SKP file.
+* **Preprocess data**: Before we can get started working with  SketchUp content in the Unreal Engine, we need to install the Unreal Datasmith Exporter plugin for SketchUp and able to export a scence from SketchUp as a *.udatasmith* file and also *.fbx* files, thus the previous application creates models in a .SKP file.
 
 * **Build a realtime and interact 3D virtual world**: We start making our 3D virtual world by adding player, light, interact, and some technique like *level streaming*....
 
@@ -139,7 +170,6 @@ Start with importing our 3D models to UE4. Datasmith brings structure data from 
 
 In our 3D models, i tried to making as many as repeating elements as possible such as windows, doors, chairs, thus when Datasmith detects multiple copies of the same component in your SketchUp scene, it only creates one set of Static Mesh assets for that component, and places multiple instances of those Static Meshes into the scene. So that it is typically better for the runtime memory requirements and performance, as well as making it easier to manage the number of Static Mesh assets. 
 
-\newpage{}
 #### Units and Scale
 In the Unreal Engine, all separations are constantly estimated in centimeters. However, other 3D design applications typically offer a choice of units of measurement. But Datasmith naturally deals with modifying the size of our scene so our geometry shows up at the very same genuine size in the Unreal Engine, and at the correct areas in 3D space. So we do not need to change anything from the previous work with Sketchup application.
 
@@ -171,6 +201,44 @@ While creating 3D models with SketchUp, I use *Layer* tool a alot to organize th
     \end{multicols}
 \caption{Left: Layer in UE4. Right: Layer in SketchUp}
 \end{figure}
+
+The 3D models files might be split into smaller part. For example, as I mentioned earlier, we will try to reduce the object as much as possible to increase performance, so i make as many as repeating elements as possible and convert these model to *Filmbox* file type to import to Unreal Engine. We still keep the floor plan, walls and the basic hallway then import to UE4 but all the furnitures will be split into individual files so that we can only need to import these files once. These pictures below is an example that i create a door and student table using 3DSmax and then import back to UE4. This technique not only help me to improve the application performace using *Level Streaming method* but also by making individual object with 3DSMax, i can control the pivot of these object which cannot be done in Sketchup.
+
+\begin{figure}
+\begin{multicols}{2}
+    \includegraphics[width=\linewidth]{cua.png}\par 
+    \includegraphics[width=1.07\linewidth]{cua2.png}\par 
+\end{multicols}
+    \centering
+    \includegraphics[width=0.6\linewidth]{ban.png}\par 
+\caption{3D object in UE4 and 3DSmax}
+\end{figure}
+
+### 3.3.2 Player/Cameras
+
+\begin{figure}
+\begin{multicols}{2}
+    \includegraphics[width=\linewidth]{Player_Start_Actor.jpg}\par 
+    \includegraphics[width=\linewidth]{camera.png}\par 
+    \end{multicols}
+\caption{Player start and Cameras actors}
+\end{figure}
+
+To be able to interact with the objects, a player should be added into the scence.
+Initially the player will not move without any script attached to it, and the most basic way to do this is through Camera Actors. The Camera Actor can be found in the Modes panel under the All Classes category. To place one into the world, drag it from the Modes panel into the game world. Using a Camera Actor is as easy as selecting it from the Modes panel and then dragging it into the world. 
+
+Thus my main purpose of this application is for students can be taken on virtual school trip before they apply to USTH, so that I only need to make my application as a first person view game.In order to do that I just attached a Camera actor into the player, once we have the Camera Actor in the world, I can then use it in combination with the Blueprints or Matinee to use it as a view point for my level.
+
+### 3.3.3 Collision
+
+### 3.3.4 Interact
+
+### 3.3.5 Bump offset
+
+### 3.3.6 Level Streaming
+
+### 3.3.7 Lighting 
+
 
 # IV Result and Discussion
 
