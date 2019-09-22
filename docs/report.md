@@ -229,16 +229,57 @@ Initially the player will not move without any script attached to it, and the mo
 
 Thus my main purpose of this application is for students can be taken on virtual school trip before they apply to USTH, so that I only need to make my application as a first person view game.In order to do that I just attached a Camera actor into the player, once we have the Camera Actor in the world, I can then use it in combination with the Blueprints or Matinee to use it as a view point for my level.
 
-### 3.3.3 Collision
+Because when I created 3D models with SketchUp, I also saved a lot of camera views with *Scences*. So that when developing for this application in UE4, these views is also included at the time we converted these models, and now i can let user change their starting point with some specific hotkeys.
 
-### 3.3.4 Interact
+### 3.3.3 Collision/RayCasting
 
-### 3.3.5 Bump offset
+Collision Response form the basis for how Unreal Engine 4 handles collision and ray casting during run time. Every object that can collide gets an Object Type and a series of responses that define how it interacts will all other object types. When a collision or overlap event occurs, both (or all) objects involved can be set to affect or be affected by blocking, overlapping, or ignoring each other. With the ability to get information from the object that the player affect, this is the main method for this project, as the character is able to interact with other objects in the virtual world.
+
+
+
+### 3.3.4 Interact/Box trigger
+
+### 3.3.5 Bump Mapping/Bump offset
+
+In order to make the object surface look more realistic, bump mapping/bump offset is one of technique in computer graphic to do that simulating small displacements of the surface, create the illusions of depth and texture of a 3D model using computer graphics. Howerver, the number of polygons does not increase. The modified surface heavily relied on light reflection, define how the light should shine on the surface. Comparing to Displacement - one of another method for find geometric surface detail, it is much faster than displacement, no extra memory necessary so as i said before, the aim of this project is also focusing on performance but the quality is much lower. In this project, I will only using *Normal map* as a type of *Bump map*. They are a special kind of texture stores a color in each pixel of the texture that allow you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.
+
+\begin{figure}
+\begin{multicols}{2}
+    \includegraphics[width=\linewidth]{BumpMapSmoothShadingDiagram.png}\par 
+    \includegraphics[width=\linewidth]{BumpMapBumpShadingDiagram.png}\par 
+    \end{multicols}
+\caption{Left: Smooth shading on three polygons. Right:Normal mapping across three polygons / viewed as a 2D diagram}
+\end{figure}
+
+With the normal map, the surface will look like in the picture below, as how the light shines on the surface.
+
+\begin{figure}
+\begin{multicols}{2}
+    \includegraphics[width=\linewidth]{Capture2.png}\par 
+    \includegraphics[width=\linewidth]{Capture.png}\par 
+    \end{multicols}
+\caption{With/Without Normal map}
+\end{figure}
 
 ### 3.3.6 Level Streaming
 
+The Level Streaming feature makes it possible to load and unload map files into memory as well as toggle their visibility during play, making it easy to have large levels broken into pieces. You have just a small, whats referred to as a persistent level, to start and load other levels into and out of your persistent level as needed. So you set up a trigger so when the player walks through another part of the level is loaded. For example, I use this method to hidden/visible furnitures.  Is it a process that can be seen so you must take care to make sure the player can't see that level until its completely loaded.
+
+
+
 ### 3.3.7 Lighting 
 
+Lighting is an essential part of every scene. In Unreal Engine, while the mesh, textures define the shape, the look of an object, the lights will define the color, the mood of a 3D environment. Lights can be added into the scene just by going to **Modes menu** -> **Light menu**.
+Different types of Light Components will allow you to add a light source as a sub-object to an Actor, depending upon the effect you aim to achieve. Once the light has been added into the scene, we can adjust the properties of the light to the way we want in the inspector, there are many different options within the Light Component. For example, we would like to adjust the position and rotation of the light using the position and rotation  widgets like any other object.
+
+There are some attribute that i will use as described in the table below.
+
+| Species | Attribute | Description |
+|--------------------|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Intensity | Brightness | Intensity determines how much energy the light outputs into the scene. \ eg: 1700 lumens = 100W lightbulb.  |
+| Light Color | R/G/B | Light Color will adjust the color of the light and the sprite that represents the light in the editor will change its color to match. |
+| Attenuation Radius | Source radius Source lenght | Define the size of specular highlights on surfaces. |
+Table: Lighting Attribute
 
 # IV Result and Discussion
 
