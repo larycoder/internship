@@ -98,7 +98,7 @@ The thesis will contain all the information necessary to reproduce the result. F
 \newpage{}
 # II. State of the art 
 
-Intense competitions in computer related industries have lead to the development of new amazing technologies. This drastically improved 3D game engines, which was initially developed for computer games, to become more adaptable and versatile. 3D visualization can provides users with the real spatial information and the 3D models resembles the real world object. Nowaday, Selection of **3D Game Engines** is very important while developing a 3D game using *different art style*. There are a lots of 3D game engines such as *Unreal Engine, Cry Engine, Unity Engine,...*, these are all free to download and also have different specifications and features. This project will focus on *Unreal Engine* because of alot of advantages by using this engine. First of all Unreal Engine is free, and users have fully access to their source code. Therefore, Epic provides multiple official video tutorials, lots of free example projects and content, an extensive wiki and regular streams showing how to use latest features. And the most important part is *A visual scripting system for non-coders enables quick prototyping* or also known as *Blueprint*. Blueprints are authoring tools designed for non programmers so designers and other team members can help tweak and prototype. UE4's Blueprint scripts resemble flowcharts where each box represents a function or value, with connections between them representing program flow. This provides a better at-a-glance indication of game logic than a simple list of events, and makes complex behaviors easier to accomplish and games a lot faster to prototype. Comparing to others engine, for example *Unity*, **Blueprint** is a win for non-developer or a game developer beginer like me. Finnally, **Great Things Happen in Unreal Engine with Unreal Studio and SketchUp** - Sketchup with Unreal Engine are the best toolkit for 3D architecture project.
+Intense competitions in computer related industries have lead to the development of new amazing technologies. This drastically improved 3D game engines, which was initially developed for computer games, to become more adaptable and versatile. 3D visualization can provides users with the real spatial information and the 3D models resembles the real world object. Nowaday, Selection of *3D Game Engines* is very important while developing a 3D game using *different art style*. There are a lots of 3D game engines such as *Unreal Engine, Cry Engine, Unity Engine,...*, these are all free to download and also have different specifications and features. This project will focus on *Unreal Engine* because of alot of advantages by using this engine. First of all Unreal Engine is free, and users have fully access to their source code. Therefore, Epic provides multiple official video tutorials, lots of free example projects and content, an extensive wiki and regular streams showing how to use latest features. And the most important part is *A visual scripting system for non-coders enables quick prototyping* or also known as *Blueprint*. Blueprints are authoring tools designed for non programmers so designers and other team members can help tweak and prototype. UE4's Blueprint scripts resemble flowcharts where each box represents a function or value, with connections between them representing program flow. This provides a better at-a-glance indication of game logic than a simple list of events, and makes complex behaviors easier to accomplish and games a lot faster to prototype. Comparing to others engine, for example *Unity*, **Blueprint** is a win for non-developer or a game developer beginer like me. Finnally, **Great Things Happen in Unreal Engine with Unreal Studio and SketchUp** - Sketchup with Unreal Engine are the best toolkit for 3D architecture project.
 
 \begin{figure}
 \centering
@@ -122,7 +122,7 @@ Autodesk 3ds Max is a professional 3D computer graphics program for making 3D an
 
 Substance Painter gives me all the tools I need to texture my 3D assets and also this software can help me to bake a normal map and metallic map.
 
-### 3.1.3 Unreal Engine
+### 3.1.4 Unreal Engine
 
 The Unreal Engine is a game engine developed by Epic Games, first showcased in the 1998 first-person shooter game Unreal. Although initially developed for first-person shooters, it has been successfully used in a variety of other genres, including platformers, fighting games, MMORPGs, and other RPGs. With its code written in C++, the Unreal Engine features a high degree of portability and is a tool used by many game developers today, with it being source-available. The engine can be used to create three-dimensional, two-dimensional, virtual reality, and augmented reality games, as well as simulations and other experiences.
 
@@ -271,7 +271,7 @@ Sketchup use simple surface color to shade geometry, so we can easily use Datasm
 \caption{Unreal Engine Object Color}
 \end{figure}
 
-#### Layer
+#### Layer:
 While creating 3D models with SketchUp, I use *Layer* tool a alot to organize the content, eg: a roof-floor will be a layer. Datasmith preserves that organization in the Unreal Editor so that we can easily show or hide layer to quickly find and select all objects in a layer.
 
 \begin{figure}
@@ -307,7 +307,7 @@ Collision Response form the basis for how Unreal Engine 4 handles collision and 
 
 Triggers are Actors that are used to cause an event to occur when they are interacted with by some other object in the level. We use this method to make some actions like door opening/closing or toggle on/off the light. There are 3 different type of triggers in Unreal Engine 4: Box Trigger, Capsule Trigger and Sphere Trigger. The method behinds these technique is quite the same, differing only in the shape of the area that player/object interact with as the name of each trigger types. When you are using trigger, you will notice that there are several different types of *events* that trigger can active. But the most common one is that using triggers with a collision in the previous section such as hitting, overlapping, etc...
 
-In this project, i will use *Box trigger* and *Overlap*  most of the time thus it is the default and common one. For an overlap to occur, both Actors need to enable Generate Overlap Events.
+In this project, i use *Box trigger* and *Overlap*  most of the time thus it is the default and common one. For an overlap to occur, both Actors need to enable Generate Overlap Events.
 For instance, to make the door open or close, I will create a collision component for the door then in the blueprint get a reference to the doors collision and connect it to a "set simulate physics" node with the activation box checked.
 I use the same method with toggle the light when player is entering the room.
 
@@ -335,7 +335,7 @@ I use the same method with toggle the light when player is entering the room.
 \end{figure}
 
 
-In order to make the object surface look more realistic, bump mapping/bump offset is one of technique in computer graphic to do that simulating small displacements of the surface, create the illusions of depth and texture of a 3D model using computer graphics. However, the number of polygons does not increase. The modified surface heavily relied on light reflection, define how the light should shine on the surface. Comparing to Displacement - one of another method for find geometric surface detail, it is much faster than displacement, no extra memory necessary so as i said before, the aim of this project is also focusing on performance but the quality is much lower. In this project, I will only using *Normal map* as a type of *Bump map*. They are a special kind of texture stores a color in each pixel of the texture that allow you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.
+In order to make the object surface look more realistic, bump mapping/bump offset is one of technique in computer graphic to do that simulating small displacements of the surface, create the illusions of depth and texture of a 3D model using computer graphics. However, the number of polygons does not increase. The modified surface heavily relied on light reflection, define how the light should shine on the surface. Comparing to Displacement - one of another method for find geometric surface detail, it is much faster than displacement, no extra memory necessary so as i said before, the aim of this project is also focusing on performance but the quality is much lower. In this project, I only use *Normal map* as a type of *Bump map*. They are a special kind of texture stores a color in each pixel of the texture that allow you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.
 
 \begin{figure}
 \begin{multicols}{2}
@@ -359,7 +359,8 @@ With the normal map, the surface will look like in the picture below, as how the
 
 #### Level Streaming:
 
-The Level Streaming feature makes it possible to load and unload map files into memory as well as toggle their visibility during play, making it easy to have large levels broken into pieces. You have just a small, whats referred to as a persistent level, to start and load other levels into and out of your persistent level as needed. So you set up a trigger so when the player walks through another part of the level is loaded. For example, I use this method to hidden/visible furnitures.  Is it a process that can be seen so you must take care to make sure the player can't see that level until its completely loaded.
+The Level Streaming feature makes it possible to load and unload map files into memory as well as toggle their visibility during play, making it easy to have large levels broken into pieces. This makes it possible to have worlds broken up into smaller chunks so that only the relevant parts of the world are taking up resources and being rendered at any point. If done properly, this allows for the creation of very large, seamless games that can make the player feel as if they are playing within a world that dwarfs them in size.
+You have just a small, whats referred to as a persistent level, to start and load other levels into and out of your persistent level as needed. So you set up a trigger so when the player walks through another part of the level is loaded. For example, I use this method to hidden/visible furnitures.  Is it a process that can be seen so you must take care to make sure the player can't see that level until its completely loaded.
 
 #### Lighting:
 
@@ -384,22 +385,36 @@ Table: Lighting Attribute
 \newpage{}
 # IV Result and Discussion
 
-## Dataset of 2D images
+### Dataset of 2D images: 
+- **726 images**, **18 videos** with different views of USTH which is:
+    - High resolution
+    - Easily captured.
+    - Cheap.
+    - Popular. 
 
-- More than 300+ images with different views of USTH which is:
-    - Easily captured
-    - Cheap
-    - Popular
-
-## Raw 3D models of USTH 
-- 6 3D models - equivalent to 6 floors in USTH which is: 1st floor, 2nd floor, 4th floor, 5th floor, 6th floor and 7th floor.
+### Raw 3D models of USTH 
+- **6 3D models** - equivalent to 6 floors in USTH which is: 1st floor, 2nd floor, 4th floor, 5th floor, 6th floor and 7th floor.
+- More than 300 different objects and textures.
 - Foundations for other reaseacher or developer to create others virtual world of USTH.
 - Can be exported to many datatype to use in any tools.
+- Free to download all of my models in [here](https://bitlylink.com/9bH8I).
 
-## Fully interactive virtual world of USTH 
+### Fully interactive virtual world of USTH 
+Succesfully implement 2 floors to create a virtual world with Unreal Engine.
 
+- Lighting 
+- Shading
+- 30 blueprints.
 
 # V. Conclusion and Future work 
+
+In this project, we managed to build a fully 3D CAD models for USTH build and a 3D virtual world using these CAD files. The simulation can be presented on USTH 10 years celebration day. 
+Yet, there is still a lot of room for improvement for this project. Here are some of the things that we want to do in order to make the simulation more realistic:
+
+- **Beter Material**: to improve quality of the virtual world.
+- **Increase Frames – per – second**: in this project, we implemented *level streaming* to Asynchronously loading and unloading levels during play to decrease memory usage and create seamless worlds. But, to conduct a full USTH building, we also need to find some others techniques instead of *level streaming* thus when i tried to import more models and increase texures quality, the computer started crashing due to memory overflow.
+- Add more interactions.
+- Ray Tracing 
 
 \newpage{}
 # Appendix
