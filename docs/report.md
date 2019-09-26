@@ -1,6 +1,8 @@
 ---
 title: "Development of USTH interactive virtual world using Unreal Engine"
 author: \textbf{DO Duy Huy Hoang} \newline
+        \textbf{Supervisor} TRAN Giang Son \newline
+        \newline
         \newline
         \textit{University of Science and Technology Hanoi} \newline 
         \textit{ICT Department}
@@ -49,6 +51,20 @@ Firstly, I would like to express my thanks to my research supervisor Dr. Tran Gi
 \end{otherlanguage*}
 
 \vspace{3cm}
+\newpage{}
+\begin{otherlanguage*}{american}
+{\Large\noindent%
+List of Acronyms\newline}
+
+\noindent%
+\textbf{USTH} University of Science and Technology of Hanoi\\
+\textbf{UE4} Unreal Engine 4\\
+\textbf{UE} Unreal Engine\\
+\textbf{FBX} Filmbox\\
+
+\noindent%
+ \newline
+\end{otherlanguage*}
 
 \newpage{}
 \listoftables
@@ -57,6 +73,7 @@ Firstly, I would like to express my thanks to my research supervisor Dr. Tran Gi
 \newpage{}
 \tableofcontents
 \newpage{}
+
 \pagenumbering{arabic} 
 
 # I. Introduction
@@ -103,7 +120,7 @@ Intense competitions in computer related industries have lead to the development
 \begin{figure}
 \centering
 {\includegraphics[width=\linewidth]{sketch+unreal.jpg}}
-\caption[https://www.unrealengine.com/en-US/blog/sketchup-unreal-engine-unreal-studio-your-design-potential-realized]{Sketch and Unreal\protect\footnotemark}
+\caption{Sketch and Unreal Engine}
 \end{figure}
 
 # III. Programs, Materials, Methodologies 
@@ -193,7 +210,7 @@ To structure and interior walls is quite simple thus we already have the digital
     \includegraphics[width=\linewidth]{floorplanex.png}\par 
     \includegraphics[width=\linewidth]{floorplan.png}\par 
     \end{multicols}
-\caption{Stucture Walls}
+\caption{Structure Walls}
 \end{figure}
 
 #### c. Furnitures:
@@ -313,7 +330,7 @@ I use the same method with toggle the light when player is entering the room.
 
 \begin{figure}
 \centering
-{\includegraphics[width=\linewidth]{toggle.png}}
+{\includegraphics[width=\linewidth]{snip.png}}
 \caption{Door Open/Close}
 \end{figure}
 
@@ -330,8 +347,7 @@ I use the same method with toggle the light when player is entering the room.
     \includegraphics[width=\linewidth]{bump_none.jpg}\par 
     \includegraphics[width=\linewidth]{bump_withnormal.jpg}\par 
     \end{multicols}
-\caption[https://docs.unrealengine.com/en-US/Engine/Rendering/LightingAndShadows/BumpMappingWithoutTangentSpace/index.html
-]{With/Without Normal map\protect\footnotemark}
+\caption{With/Without Normal map\protect\footnotemark}
 \end{figure}
 
 
@@ -342,7 +358,7 @@ In order to make the object surface look more realistic, bump mapping/bump offse
     \includegraphics[width=\linewidth]{BumpMapSmoothShadingDiagram.png}\par 
     \includegraphics[width=\linewidth]{BumpMapBumpShadingDiagram.png}\par 
     \end{multicols}
-\caption[https://docs.unity3d.com/Manual/StandardShaderMaterialParameterNormalMap.html]{Left: Smooth shading on three polygons. Right:Normal mapping across three polygons / viewed as a 2D diagram\protect\footnotemark}
+\caption{Left: Smooth shading on three polygons. Right:Normal mapping across three polygons / viewed as a 2D diagram\protect\footnotemark}
 \end{figure}
 
 The picture above describes how normal map affect the surface, the surface normals are represented by the orange arrows - used to calculate how light reflects off the surface. It means that these light will respond the same across the length of each polygon. So what happended if we add normal map, it will modify the surface with the texture that store the information. Thus, the normal map is an image texture, does not contain any actual light or dark shading which is mapped to the surface of the model, so it will represent a deviation in surface normal direction away from the true surface normal of the flat polygon.
@@ -437,6 +453,42 @@ Some demo pictures with different view in USTH 7th floor.
 \caption{USTH 7th floor virtual world}
 \end{figure}
 
+Comparasion: 
+
+\begin{figure}
+\begin{multicols}{3}
+    \includegraphics[width=\linewidth,height=1.5in]{apendix2r.JPG}\par
+    \includegraphics[width=\linewidth,height=1.5in]{apendix2s.png}\par 
+    \includegraphics[width=\linewidth,height=1.5in]{apendix2.png}\par 
+\end{multicols}
+\begin{multicols}{3}
+    \includegraphics[width=\linewidth, height=1.5in]{apendix1r.JPG}\par
+    \includegraphics[width=\linewidth, height=1.5in]{apendix1.png}\par 
+    \includegraphics[width=\linewidth, height=1.5in]{apendix1u.png}\par 
+\end{multicols}
+\begin{multicols}{3}
+    \includegraphics[width=\linewidth, height=1.5in]{apendix3r.JPG}\par
+    \includegraphics[width=\linewidth, height=1.5in]{apendix3s.png}\par 
+    \includegraphics[width=\linewidth, height=1.5in]{apendix3u.png}\par 
+\end{multicols}
+\begin{multicols}{3}
+    \includegraphics[width=\linewidth, height=1.5in]{apendix4r.JPG}\par
+    \includegraphics[width=\linewidth, height=1.5in]{apendix4s.png}\par 
+    \includegraphics[width=\linewidth, height=1.5in]{apendix4u.png}\par 
+\end{multicols}
+\caption{From 2D Image to Virtual World}
+\end{figure}
+
+\begin{figure}
+\begin{multicols}{2}
+    \includegraphics[width=\linewidth, height=2in]{IMG_3446.JPG}\par 
+    \includegraphics[width=\linewidth, height=2in]{compare.png}\par 
+\end{multicols}
+\centering
+    \includegraphics[width=\linewidth]{capture.png}\par 
+\caption{From 2D Image to Virtual World}
+\end{figure}
+
 Pictures about 3D models USTH laboratory in SketchUp:
 
 \begin{figure}
@@ -448,20 +500,13 @@ Pictures about 3D models USTH laboratory in SketchUp:
     \includegraphics[width=\linewidth]{labbp.png}\par 
     \includegraphics[width=\linewidth]{tangham.png}\par 
 \end{multicols}
+\begin{multicols}{2}
+    \includegraphics[width=\linewidth]{more.png}\par 
+    \includegraphics[width=\linewidth]{more2.png}\par 
+\end{multicols}
 \caption{SketchUp models}
 \end{figure}
 
-Comparasion: 
-
-\begin{figure}
-\begin{multicols}{2}
-    \includegraphics[width=\linewidth]{IMG_3446.JPG}\par 
-    \includegraphics[width=\linewidth]{compare.png}\par 
-\end{multicols}
-\centering
-    \includegraphics[width=\linewidth]{capture.png}\par 
-\caption{From 2D Image to Virtual World}
-\end{figure}
 
 \newpage{}
 # References
@@ -471,6 +516,8 @@ https://docs.unrealengine.com
 [2] SketchUp Manual
 https://help.sketchup.com
 
+[3] Chikai J. Ohazama. Real-time lighting method using 3D texture mapping.
 
-// more references
-6v5t9c
+[4] Kelly L. Murdock. Google SketchUp and SketchUp Pro 7.  
+
+[5] Weichao Qiu, Alan Yuille UnrealCV. Connecting Computer Vision to Unreal Engine.
