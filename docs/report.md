@@ -14,6 +14,7 @@ header-includes: |
     \usepackage{multicol}
     \usepackage{graphicx}
 footer-left: Do Hoang
+mainfont: "SourceSansPro-Regular"
 caption-justification: centering
 # lot: true
 # lof: true
@@ -133,7 +134,7 @@ SketchUp is a 3D modeling computer program for a wide range of drawing applicati
 
 ### 3.1.2 3DS Max
 
-Autodesk 3ds Max is a professional 3D computer graphics program for making 3D animations, models, games and images. With this feature, the software will help me to correct the position of the texture and also to edit UV mapping of some models.
+Autodesk 3DS Max is a professional 3D computer graphics program for making 3D animations, models, games and images. With this feature, the software will help me to correct the position of the texture and also to edit UV mapping of some models.
 
 ### 3.1.3 Substance Painter
 
@@ -143,7 +144,7 @@ Substance Painter gives me all the tools I need to texture my 3D assets and also
 
 The Unreal Engine is a game engine developed by Epic Games, first showcased in the 1998 first-person shooter game Unreal. Although initially developed for first-person shooters, it has been successfully used in a variety of other genres, including platformers, fighting games, MMORPGs, and other RPGs. With its code written in C++, the Unreal Engine features a high degree of portability and is a tool used by many game developers today, with it being source-available. The engine can be used to create three-dimensional, two-dimensional, virtual reality, and augmented reality games, as well as simulations and other experiences.
 
-This is the main program that I use to create a virtual world.
+This is the main program which is used to create a virtual world.
 
 ## 3.2 Materials
 
@@ -153,7 +154,7 @@ This is the main program that I use to create a virtual world.
 
 \begin{figure}
 \centering
-{\includegraphics[width=\linewidth]{workflow.png}}
+{\includegraphics[width=\linewidth]{workflow2.png}}
 \caption{Work Flow Overall Diagram}
 \end{figure}
 
@@ -194,10 +195,13 @@ This section will explain all the methods of the work.
 
 First of all we need to create a Floor Plans. When you install SketchUp, it also comes with Layout application. These application is designed to work together. After you insert a SketchUp models into a LayOut document, you can design the document to highlight your 3D model's best features. If you ever need to change or update your original SketchUp model, you can update the model in LayOut so that all the details are synched automatically. Ground Prep is also known as Schematic Design in Architecture, it is the first phase of design. The architect establishes the size, location, and relationships between all the spaces. Thus USTH provided me a 2D legacy floor plan images, but it is captured from a cemera intead of a digital floorplan, so i will need to transfer it into a digital version as the picture below.
 
+\newpage{}
+
 \begin{figure}
 \centering
-{\includegraphics[width=\linewidth]{layout.pdf}}
-\caption{Floor Plan}
+{\includegraphics[width=\linewidth,height=0.4\textheight]{floorplanr.jpg}}\par
+{\includegraphics[width=\linewidth, height=.5\textheight]{layout.pdf}}
+\caption{Floor Plan }
 \end{figure}
 
 \newpage{}
@@ -351,7 +355,7 @@ I use the same method with toggle the light when player is entering the room.
 \end{figure}
 
 
-In order to make the object surface look more realistic, bump mapping/bump offset is one of technique in computer graphic to do that simulating small displacements of the surface, create the illusions of depth and texture of a 3D model using computer graphics. However, the number of polygons does not increase. The modified surface heavily relied on light reflection, define how the light should shine on the surface. Comparing to Displacement - one of another method for find geometric surface detail, it is much faster than displacement, no extra memory necessary so as i said before, the aim of this project is also focusing on performance but the quality is much lower. In this project, I only use *Normal map* as a type of *Bump map*. They are a special kind of texture stores a color in each pixel of the texture that allow you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.
+In order to make the object surface look more realistic, bump mapping/bump offset![1] is one of technique in computer graphic to do that simulating small displacements of the surface, create the illusions of depth and texture of a 3D model using computer graphics. However, the number of polygons does not increase. The modified surface heavily relied on light reflection, define how the light should shine on the surface. Comparing to Displacement![2] - one of another method for find geometric surface detail, it is much faster than displacement, no extra memory necessary so as I said before, the aim of this project is also focusing on performance but the quality is much lower. In this project, I only use *Normal map* as a type of *Bump map*. They are a special kind of texture stores a color in each pixel of the texture that allow you to add surface detail such as bumps, grooves, and scratches to a model which catch the light as if they are represented by real geometry.
 
 \begin{figure}
 \begin{multicols}{2}
@@ -398,29 +402,38 @@ Table: Lighting Attribute
 \caption{Lighting Example}
 \end{figure}
 
-\newpage{}
+#### Build / Export Application
+
+Before an Unreal project can be distributed to users, it must be properly packaged. Several steps are performed during the packaging process. Project-specific source code will be compiled first. Once the code is compiled, all required content will be converted, or "cooked," into a format that can be used by the target platform![3]. This application will be built to run on Window, MacOS and Linux thus we are focusing on marketing, and for students and USTH's lecturers. 
+
+##### Optimizing Load Times
+
+Short loading times are essential for open-world games but are valuable in every type of game. The Unreal Engine provides several methods to optimize your project's loading time during the packaging process. For this project, Using the Event Driven Loader (EDL) and the Asynchronous Loading Thread (ALT) is the main technique that I used.
+
 # IV Result and Discussion
 
-### Dataset of 2D images: 
+## Dataset of 2D images: 
 - **726 images**, **18 videos** with different views of USTH which is:
     - High resolution
     - Easily captured.
     - Cheap.
     - Popular. 
 
-### Raw 3D models of USTH 
+## Raw 3D models of USTH 
 - **6 3D models** - equivalent to 6 floors in USTH which is: 1st floor, 2nd floor, 4th floor, 5th floor, 6th floor and 7th floor.
 - More than 300 different objects and textures.
 - Foundations for other reaseacher or developer to create others virtual world of USTH.
 - Can be exported to many datatype to use in any tools.
 - Free to download all of my models in [here](https://bitlylink.com/9bH8I).
 
-### Fully interactive virtual world of USTH 
-Succesfully implement 2 floors to create a virtual world with Unreal Engine.
+## Fully interactive virtual world of USTH 
+Succesfully implement 2 floors ( 7th floor and 1st floor ) to create a virtual world with Unreal Engine.
 
 - Lighting 
 - Shading
 - 30 blueprints.
+
+The fps are capped at 60+, with the highest lighting and quality by using a dedicated graphic card. But with an integrated graphics card, the frames-per-second will be decreased a bit to 40.
 
 # V. Conclusion and Future work 
 
