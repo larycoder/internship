@@ -18,6 +18,7 @@ mainfont: "SourceSansPro-Regular"
 caption-justification: centering
 # lot: true
 # lof: true
+#pandoc report.md -o report.pdf --from markdown --template eisvogel --listings -V fontsize=13pt
 ...
 \pagenumbering{Roman} 
 
